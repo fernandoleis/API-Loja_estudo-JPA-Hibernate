@@ -155,3 +155,10 @@ target/
 
 
 # End of https://www.gitignore.io/api/java,eclipse,java-web,intellij
+/.idea/vcs.xml
+/.idea/API-Loja_estudo-JPA-Hibernate.iml
+/.idea/artifacts/API_Loja_estudo_JPA_Hibernate_war.xml
+/.idea/artifacts/API_Loja_estudo_JPA_Hibernate_war_exploded.xml
+/.idea/compiler.xml
+/.idea/misc.xml
+/.idea/modules.xml
