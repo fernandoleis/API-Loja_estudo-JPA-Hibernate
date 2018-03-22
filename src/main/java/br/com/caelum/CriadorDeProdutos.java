@@ -61,7 +61,7 @@ public class CriadorDeProdutos {
 				livroDeArquitetura.setNome("Introduçao a Arquitetura Java e Design de projetos com Java");
 				livroDeArquitetura.setLoja(casaDoCodigo);
 				livroDeArquitetura.setPreco(30.0);
-//				livroDeArquitetura.adicionarCategorias(tecnologia);
+				livroDeArquitetura.adicionarCategorias(tecnologia);
 				livroDeArquitetura.setDescricao("Neste livro, os autores, conhecidos especialistas da "
 											   + " área, apresentam muitos tópicos que aparecem com frequência"
 											   + " na plataforma Java, incluindo desde modelagem e design das "
@@ -95,7 +95,7 @@ public class CriadorDeProdutos {
 				violao.setDescricao("Excelente violão");
 				violao.setPreco(500.0);
 				violao.adicionarCategorias(musica);
-				violao.setLinkDaFoto("http://www.marillac.g12.br/imgs/atividade%20complementar/violao.jpg");
+				violao.setLinkDaFoto("http://www.teclacenter.com.br/images/detailed/22/11012401_800.jpg");
 				
 				em.persist(violao);
 				
