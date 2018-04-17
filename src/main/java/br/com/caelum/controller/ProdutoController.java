@@ -43,7 +43,7 @@ public class ProdutoController {
 	public String form(Produto produto) { 
 		return "produto/form";
 	}
-	
+
 	@RequestMapping(value="/{id}/form", method=RequestMethod.GET)
 	public String update(@PathVariable Integer id, Model model) {
 		Produto produto = produtoDao.getProduto(id);

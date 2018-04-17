@@ -1,10 +1,12 @@
 package br.com.caelum;
 
+import java.beans.PropertyVetoException;
 import java.util.Properties;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -18,14 +20,17 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class JpaConfigurator {
 
 	@Bean
-	public DataSource getDataSource() {
-	    DriverManagerDataSource dataSource = new DriverManagerDataSource();
+	public DataSource getDataSource() throws PropertyVetoException {
+		ComboPooledDataSource dataSource = new ComboPooledDataSource();
+		dataSource.setDriverClass("com.mysql.jdbc.Driver");
+		dataSource.setUser("root");
+		dataSource.setPassword("leis");
+		dataSource.setJdbcUrl("jdbc:mysql://localhost/projeto_jpa");
+		dataSource.setMinPoolSize(3);
+		dataSource.setMaxPoolSize(5);
+		dataSource.setNumHelperThreads(15);
 
-	    dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	    dataSource.setUrl("jdbc:mysql://localhost/projeto_jpa");
-	    dataSource.setUsername("root");
-	    dataSource.setPassword("leis");
-
+		dataSource.setIdleConnectionTestPeriod(1); //a cada um segundo testamos as conexões ociosas
 	    return dataSource;
 	}
 

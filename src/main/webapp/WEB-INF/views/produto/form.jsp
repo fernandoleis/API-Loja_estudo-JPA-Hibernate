@@ -91,6 +91,7 @@
 					<div class="form-group">
 						<input type="submit" class="btn btn-success" value="Atualizar">
 						<input type="hidden" name="id" value="${produto.id}">
+						<input type="hidden" name="versao" value="${produto.versao}">
 					</div>
 				</c:if>
 				
@@ -102,6 +103,7 @@
 				
  			</form>
 		</div>
+
 	</div>
 </div>
 

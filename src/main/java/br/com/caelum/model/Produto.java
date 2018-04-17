@@ -33,10 +33,12 @@ public class Produto {
     @Min(20)
     private double preco;
 
-
     @Valid
     @ManyToOne
     private Loja loja;
+
+    @Version
+    private Integer versao;
 
 
     public String getDescricao() {
@@ -101,5 +103,13 @@ public class Produto {
 
     public void setCategorias(List<Categoria> categorias) {
         this.categorias = categorias;
+    }
+
+    public Integer getVersao() {
+        return versao;
+    }
+
+    public void setVersao(Integer versao) {
+        this.versao = versao;
     }
 }
